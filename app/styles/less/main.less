@@ -1,0 +1,33 @@
+@import "custom-bootstrap";
+@import "../../../bower_modules/font-awesome/less/font-awesome";
+@import "../../../bower_modules/lesshat/build/lesshat";
+@import (less) "../../../bower_modules/animate.css/animate.min.css";
+@import "mixins";
+@import "custom-fonts";
+
+@bkgColor: #000;
+@textColor: #fff;
+@imgBaseURL: "../images/";
+
+* { outline: none; }
+html {
+  height: 100%;
+  min-height:100%;
+}
+
+body {
+  color: @textColor;
+  background: @bkgColor;
+  margin: 0;
+  height: 100%;
+  min-height:100%;
+  font-family: "slim_joeregular","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+.countdown-display {
+  text-align: center;
+  width: 100%;
+  font-size: 5em;
+  color: #ee2a4a;
+}
