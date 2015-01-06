@@ -31,8 +31,8 @@ module.exports = {
         './app/images/**/*'
       ],
       fonts: [
-        './app/fonts/**/*.{eot,svg,ttf,woff}',
-        './bower_modules/font-awesome/fonts/*.{eot,svg,ttf,woff}'
+        './app/fonts/**/*.{eot,svg,ttf,woff,woff2}',
+        './bower_modules/font-awesome/fonts/*.{eot,svg,ttf,woff,woff2}'
       ],
       html: [
         './app/*.html', './app/*.php'
@@ -41,7 +41,12 @@ module.exports = {
         './app/partials/**/*.html'
       ],
       extras: [
-        './app/*.*', '!app/*.html'
+        './app/*.*',
+        '!app/*.html'
+      ],
+      projectJSON: [
+        './*.json',
+        '!./codekit-config.json'
       ]
     },
     file: {
