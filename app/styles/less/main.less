@@ -22,6 +22,7 @@ body {
   height: 100%;
   min-height:100%;
   font-family: "slim_joeregular","Helvetica Neue",Helvetica,Arial,sans-serif;
+  /* font-family: "big_johnregular","Helvetica Neue",Helvetica,Arial,sans-serif; */
 }
 
 
@@ -30,4 +31,24 @@ body {
   width: 100%;
   font-size: 5em;
   color: #ee2a4a;
+
+  h1.title {
+    opacity: 0;
+    /* font-family: "slim_joeregular"; */
+  }
+
+  .time {
+    opacity: 0;
+
+    .segment {
+      display: inline-block;
+      text-align: center;
+      min-width: 1.286em + 0.043em;
+
+      &.days, &.milliseconds {
+        width: 1.929em + 0.043em;
+      }
+
+    }
+  }
 }
