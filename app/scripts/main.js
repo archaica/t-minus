@@ -1,14 +1,14 @@
-var $ = require('jquery'),
-    _ = require('lodash'),
+var _ = require('lodash'),
     rAF = require('rAF'),
     moment = require('moment'),
     countdown = require('countdown'),
     momentCountdown = require('momentCountdown');
+    // webcomponents = require('webcomponentsjs');
 
-$(document).ready(function onDomReady() {
-    var $title = $('h1.title'),
-        $countdown = $('.countdown-display'),
-        $time = $countdown.find('.time'),
+(function () {
+    var titleEl = document.querySelector('h1.title'),
+        countdownEl = document.querySelector('.countdown-display'),
+        timeEl = countdownEl.querySelector('.time'),
         stop = false,
         endDate = '2015-06-02',
         display = _.template(
@@ -41,19 +41,33 @@ $(document).ready(function onDomReady() {
         milliseconds: ('000' + time.milliseconds.toString()).slice(-3)
       };
 
-      // console.log(display, time);
-      $time.html(display(data));
+      timeEl.innerHTML = display(data);
 
       // animate, or break the chain on 0
       if (!stop) {
-        requestAnimationFrame(update, $countdown);
+        requestAnimationFrame(update, countdownEl);
       }
     }
 
-    $title.addClass('animated fadeInDown');
-    $title.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-      $time.addClass('animated fadeIn');
-    });
+    if (titleEl.classList) {
+      titleEl.classList.add('animated', 'fadeInDown');
+    } else {
+      titleEl.className += ' ' + 'animated fadeInDown';
+    }
+
+    function animateTime() {
+      if (timeEl.classList) {
+        timeEl.classList.add('animated', 'fadeIn');
+      } else {
+        timeEl.className += ' ' + 'animated fadeIn';
+      }
+    };
+
+    titleEl.addEventListener('webkitAnimationEnd', animateTime);
+    titleEl.addEventListener('mozAnimationEnd', animateTime);
+    titleEl.addEventListener('MSAnimationEnd', animateTime);
+    titleEl.addEventListener('oanimationend', animateTime);
+    titleEl.addEventListener('animationend', animateTime);
 
     update();
-});
+})();

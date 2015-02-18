@@ -1,6 +1,6 @@
 {
   "name": "t-minus",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "a countdown to exit",
   "main": "main.js",
   "scripts": {

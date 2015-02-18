@@ -1,6 +1,6 @@
 {
   "name": "t-minus",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "authors": [
     "Marshall Upshur <marshall@mbucreations.com>"
   ],
@@ -16,7 +16,8 @@
     "animate.css": "~3.2.0",
     "lesshat": "~3.0.2",
     "gsap": "~1.15.0",
-    "moment-countdown": "~0.0.1"
+    "moment-countdown": "~0.0.1",
+    "webcomponentsjs": "~0.5.5"
   },
   "ignore": [
     "**/.*",
