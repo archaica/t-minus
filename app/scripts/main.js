@@ -61,7 +61,7 @@ var _ = require('lodash'),
       } else {
         timeEl.className += ' ' + 'animated fadeIn';
       }
-    };
+    }
 
     titleEl.addEventListener('webkitAnimationEnd', animateTime);
     titleEl.addEventListener('mozAnimationEnd', animateTime);
