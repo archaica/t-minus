@@ -7,8 +7,8 @@ var _ = require('lodash'),
 
 (function () {
     var titleEl = document.querySelector('h1.title'),
-        countdownEl = document.querySelector('.countdown-display'),
-        timeEl = countdownEl.querySelector('.time'),
+        countdownEl = document.querySelector('div.countdown-display'),
+        timeEl = countdownEl.querySelector('div.time'),
         stop = false,
         endDate = '2015-06-02',
         display = _.template(
