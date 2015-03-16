@@ -11,6 +11,7 @@
     "url": "https://marshallbu@github.com/marshallbu/t-minus.git"
   },
   "devDependencies": {
+    "babel": "^4.7.12",
     "box-view": "^1.2.0",
     "del": "^1.1.0",
     "exports-loader": "^0.6.2",
