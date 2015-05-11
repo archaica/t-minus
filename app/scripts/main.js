@@ -10,7 +10,7 @@ var _ = require('lodash'),
         countdownEl = document.querySelector('div.countdown-display'),
         timeEl = countdownEl.querySelector('div.time'),
         stop = false,
-        endDate = '2015-06-02',
+        endDate = '2015-06-15',
         display = _.template(
           '<span class="segment days"><%= days %></span>:' +
           '<span class="segment hours"><%= hours %></span>:' +
